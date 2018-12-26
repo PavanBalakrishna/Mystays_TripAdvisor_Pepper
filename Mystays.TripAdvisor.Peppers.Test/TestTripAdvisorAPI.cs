@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Mystays.TripAdvisor.Business.APIInvoker;
+using Mystays.TripAdvisor.Business.API.APIInvoker;
 using Mystays.TripAdvisor.Business.Helpers;
 
 namespace Mystays.TripAdvisor.Peppers.Test
@@ -17,10 +17,12 @@ namespace Mystays.TripAdvisor.Peppers.Test
             HelpersMethods.SetSettings("http://api.tripadvisor.com/api/partner/2.0/location/{0}/attractions?key={1}&locale={2}", "TripAdvisorAttractionsURL");
             HelpersMethods.SetSettings("http://api.tripadvisor.com/api/partner/2.0/location/{0}/hotels?key={1}&locale={2}", "TripAdvisorHotelsURL");
             HelpersMethods.SetSettings("http://api.tripadvisor.com/api/partner/2.0/location/{0}/restaurants?key={1}&locale={2}", "TripAdvisorRestaurantsURL");
-            HelpersMethods.SetSettings("60745|60747|60750", "TripAdvisorLocationIDs");
-            HelpersMethods.SetSettings("en-us|ja-jp|zh-cn", "TripAdvisorLanguages");
+            HelpersMethods.SetSettings("60745|60747|60750|60748|60746|60741|60742|60743|60744|60745", "TripAdvisorLocationIDs");
+            HelpersMethods.SetSettings("en-us|ja-jp|zh-cn|zh-tw|ko-kr", "TripAdvisorLanguages");
 
-            TripAdvisorAPIService.CallTripAdvisorAPI();
+            IAPIInvokerService tripAdvisorAPIService = new TripAdvisorAPIService();
+
+            tripAdvisorAPIService.CallTripAdvisorAPI();
         }
     }
 }

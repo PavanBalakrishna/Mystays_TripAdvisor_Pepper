@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Mystays.TripAdvisor.Business.ApiModels.Activity;
+using Mystays.TripAdvisor.Business.API.ApiModels.Activity;
 using Mystays.TripAdvisor.Business.Constants;
-using Mystays.TripAdvisor.Business.ApiModels.Location;
-using Mystays.TripAdvisor.Business.ApiModels.Attraction;
-using Mystays.TripAdvisor.Business.ApiModels.Hotel;
-using Mystays.TripAdvisor.Business.ApiModels.Restaurant;
+using Mystays.TripAdvisor.Business.API.ApiModels.Location;
+using Mystays.TripAdvisor.Business.API.ApiModels.Attraction;
+using Mystays.TripAdvisor.Business.API.ApiModels.Hotel;
+using Mystays.TripAdvisor.Business.API.ApiModels.Restaurant;
 
-namespace Mystays.TripAdvisor.Business.ApiModels
+namespace Mystays.TripAdvisor.Business.API.ApiModels
 {
     public class LocationModel
     {

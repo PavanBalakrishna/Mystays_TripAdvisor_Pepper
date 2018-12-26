@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mystays.TripAdvisor.Business.ApiModels.Restaurant
+namespace Mystays.TripAdvisor.Business.API.ApiModels.Hotel
 {
     public class AddressObj
     {
@@ -15,25 +15,6 @@ namespace Mystays.TripAdvisor.Business.ApiModels.Restaurant
         public string address_string { get; set; }
     }
 
-    public class WeekRange
-    {
-        public string localized_day_name { get; set; }
-        public List<object> times { get; set; }
-        public string day_name { get; set; }
-    }
-
-    public class Hours
-    {
-        public List<WeekRange> week_ranges { get; set; }
-        public string timezone { get; set; }
-    }
-
-    public class Cuisine
-    {
-        public string name { get; set; }
-        public string localized_name { get; set; }
-    }
-
     public class RankingData
     {
         public string ranking_string { get; set; }
@@ -41,22 +22,7 @@ namespace Mystays.TripAdvisor.Business.ApiModels.Restaurant
         public string geo_location_id { get; set; }
         public string ranking { get; set; }
         public string geo_location_name { get; set; }
-        public List<string> ranking_string_detail { get; set; }
-    }
-
-    public class Images
-    {
-        public string small { get; set; }
-        public string large { get; set; }
-    }
-
-    public class Award
-    {
-        public string award_type { get; set; }
-        public string year { get; set; }
-        public Images images { get; set; }
-        public List<object> categories { get; set; }
-        public string display_name { get; set; }
+        public object ranking_string_detail { get; set; }
     }
 
     public class Category
@@ -79,15 +45,30 @@ namespace Mystays.TripAdvisor.Business.ApiModels.Restaurant
         public string location_id { get; set; }
     }
 
-    public class Restaurant
+    public class Images
+    {
+        public string tiny { get; set; }
+        public string small { get; set; }
+        public string large { get; set; }
+    }
+
+    public class Award
+    {
+        public string award_type { get; set; }
+        public string year { get; set; }
+        public Images images { get; set; }
+        public List<string> categories { get; set; }
+        public string display_name { get; set; }
+    }
+
+    public class Hotel
     {
         public AddressObj address_obj { get; set; }
-        public Hours hours { get; set; }
+        public object hours { get; set; }
         public object percent_recommended { get; set; }
         public string latitude { get; set; }
         public string rating { get; set; }
         public string description { get; set; }
-        public List<Cuisine> cuisine { get; set; }
         public string location_id { get; set; }
         public RankingData ranking_data { get; set; }
         public string api_detail_url { get; set; }
@@ -108,18 +89,17 @@ namespace Mystays.TripAdvisor.Business.ApiModels.Restaurant
 
     public class Paging
     {
-        public object next { get; set; }
-        public object previous { get; set; }
+        public string next { get; set; }
+        public string previous { get; set; }
         public string results { get; set; }
         public string total_results { get; set; }
         public string skipped { get; set; }
     }
 
-    public class RestaurantRootObject
+    public class HotelRootObject
     {
-        public List<Restaurant> data { get; set; }
+        public List<Hotel> data { get; set; }
         public Paging paging { get; set; }
     }
-
 
 }

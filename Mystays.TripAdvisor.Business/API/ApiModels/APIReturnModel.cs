@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mystays.TripAdvisor.Business.ApiModels
+namespace Mystays.TripAdvisor.Business.API.ApiModels
 {
     public class APIReturnModel
     {
