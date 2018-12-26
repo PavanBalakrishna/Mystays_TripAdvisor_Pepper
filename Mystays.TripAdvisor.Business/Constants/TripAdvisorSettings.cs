@@ -14,6 +14,7 @@ namespace Mystays.TripAdvisor.Business.Constants
         public static string TripAdvisorAttractionsURL => HelpersMethods.GetSettings();
         public static string TripAdvisorHotelsURL => HelpersMethods.GetSettings();
         public static string TripAdvisorRestaurantsURL => HelpersMethods.GetSettings();
+        public static string TripAdvisorReviewsURL => HelpersMethods.GetSettings();
         public static string TripAdvisorLocationIDs => HelpersMethods.GetSettings();
         public static string TripAdvisorLanguages => HelpersMethods.GetSettings();
         #endregion API

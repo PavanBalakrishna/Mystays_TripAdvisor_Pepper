@@ -15,5 +15,7 @@ namespace Mystays.TripAdvisor.Business.Database.Models
         public string LocationName { get; set; }
         public string Country { get; set; }
         public List<Activity> Activities { get; set; }
+        [ForeignKey("Language_ID")]
+        public Language Language { get; set; }
     }
 }

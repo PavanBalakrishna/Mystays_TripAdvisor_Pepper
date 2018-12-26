@@ -3,6 +3,9 @@ using Mystays.TripAdvisor.Business.API.APIInvoker;
 using Mystays.TripAdvisor.Business.Database;
 using Mystays.TripAdvisor.Business.Database.Models;
 using Mystays.TripAdvisor.Business.Helpers;
+using System.Collections.Generic;
+using System.Linq;
+
 
 namespace Mystays.TripAdvisor.Peppers.Test
 {
@@ -30,16 +33,17 @@ namespace Mystays.TripAdvisor.Peppers.Test
             {
                 Location location = new Location();
                 location.Location_ID = 456;
-                location.LocationName = "Bombay";
+                location.LocationName = "Kolkotta";
                 location.Country = "India";
                 location.Activities = new System.Collections.Generic.List<Activity>()
                 {
                      new Activity()
                      {
-                          ActivityName="Cycling",
+                          ActivityName="Swimming",
                           LocalName="‚Í‚¢‚Â‚Å‚à‚²Ž©—R‚É•ÏX‚Å‚«‚Ü‚·"
                      }
                 };
+                location.Language = context.Languages.FirstOrDefault(l => l.LanguageCode == "en-us");
                 context.Locations.Add(location);
                 context.SaveChanges();
             }
