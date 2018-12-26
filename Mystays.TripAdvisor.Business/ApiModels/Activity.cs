@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mystays.TripAdvisor.Business.Models.Activity
+namespace Mystays.TripAdvisor.Business.ApiModels.Activity
 {
 
     public class Small

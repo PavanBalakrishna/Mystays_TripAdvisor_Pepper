@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mystays.TripAdvisor.Business.Models.Attraction
+namespace Mystays.TripAdvisor.Business.ApiModels.Attraction
 {
 
     public class AddressObj
@@ -76,7 +76,7 @@ namespace Mystays.TripAdvisor.Business.Models.Attraction
         public string award_type { get; set; }
         public string year { get; set; }
         public Images images { get; set; }
-        public List<Category> categories { get; set; }
+        public List<string> categories { get; set; }
         public string display_name { get; set; }
     }
 
