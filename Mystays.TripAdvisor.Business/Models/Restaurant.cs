@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mystays.TripAdvisor.ConsumerService.Models.Restaurant
+namespace Mystays.TripAdvisor.Business.Models.Restaurant
 {
     public class AddressObj
     {

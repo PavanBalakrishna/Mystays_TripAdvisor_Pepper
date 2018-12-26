@@ -1,11 +1,10 @@
 ﻿using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
-using Mystays.TripAdvisor.ConsumerService.Models.Activity;
-using Amazon.Lambda.Core;
 using System;
+using Mystays.TripAdvisor.Business.Models.Activity;
 
-namespace Mystays.TripAdvisor.ConsumerService.APIInvoker
+namespace Mystays.TripAdvisor.Business.APIInvoker
 {
     public static class TripAdvisorAPIService
     {
