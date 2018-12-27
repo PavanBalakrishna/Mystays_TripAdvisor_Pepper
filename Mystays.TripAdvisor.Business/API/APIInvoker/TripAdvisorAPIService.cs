@@ -9,6 +9,7 @@ using Mystays.TripAdvisor.Business.API.ApiModels.Attraction;
 using Mystays.TripAdvisor.Business.API.ApiModels.Hotel;
 using Mystays.TripAdvisor.Business.API.ApiModels.Restaurant;
 using Mystays.TripAdvisor.Business.API.ApiModels;
+using Mystays.TripAdvisor.Business.API.ApiModels.Review;
 
 namespace Mystays.TripAdvisor.Business.API.APIInvoker
 {
@@ -72,6 +73,14 @@ namespace Mystays.TripAdvisor.Business.API.APIInvoker
                                 var response = httpClient.GetAsync(url).Result;
                                 RestaurantRootObject restaurantrootObject = JsonConvert.DeserializeObject<RestaurantRootObject>(response.Content.ReadAsStringAsync().Result);
                                 model.RestaurantDetails = restaurantrootObject;
+                            }
+
+                            if (TripAdvisorSettings.TripAdvisorReviewsURL != null)
+                            {
+                                string url = string.Format(TripAdvisorSettings.TripAdvisorReviewsURL, locationID, TAkey, language);
+                                var response = httpClient.GetAsync(url).Result;
+                                ReviewRootObject reviewrootObject = JsonConvert.DeserializeObject<ReviewRootObject>(response.Content.ReadAsStringAsync().Result);
+                                model.ReviewDetails = reviewrootObject;
                             }
 
                             returnModel.locationModels.Add(model);

@@ -7,6 +7,7 @@ using Mystays.TripAdvisor.Business.API.ApiModels.Location;
 using Mystays.TripAdvisor.Business.API.ApiModels.Attraction;
 using Mystays.TripAdvisor.Business.API.ApiModels.Hotel;
 using Mystays.TripAdvisor.Business.API.ApiModels.Restaurant;
+using Mystays.TripAdvisor.Business.API.ApiModels.Review;
 
 namespace Mystays.TripAdvisor.Business.API.ApiModels
 {
@@ -20,5 +21,6 @@ namespace Mystays.TripAdvisor.Business.API.ApiModels
         public AttractionRootObject AttractionDetails { get; set; }
         public HotelRootObject HotelDetails { get; set; }
         public RestaurantRootObject RestaurantDetails { get; set; }
+        public ReviewRootObject ReviewDetails { get; set; }
     }
 }

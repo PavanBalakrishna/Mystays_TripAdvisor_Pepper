@@ -22,6 +22,7 @@ namespace Mystays.TripAdvisor.Peppers.Test
             //HelpersMethods.SetSettings("http://api.tripadvisor.com/api/partner/2.0/location/{0}/attractions?key={1}&locale={2}", "TripAdvisorAttractionsURL");
             //HelpersMethods.SetSettings("http://api.tripadvisor.com/api/partner/2.0/location/{0}/hotels?key={1}&locale={2}", "TripAdvisorHotelsURL");
             //HelpersMethods.SetSettings("http://api.tripadvisor.com/api/partner/2.0/location/{0}/restaurants?key={1}&locale={2}", "TripAdvisorRestaurantsURL");
+            //HelpersMethods.SetSettings("http://api.tripadvisor.com/api/partner/2.0/location/{0}/reviews?key={1}&locale={2}", "TripAdvisorReviewsURL");
             //HelpersMethods.SetSettings("60745", "TripAdvisorLocationIDs");
             //HelpersMethods.SetSettings("en-us", "TripAdvisorLanguages");
 
